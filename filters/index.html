@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="MsgApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="../angular.js"></script>
+    <script src="app.js"></script>
+    <title>Custom filter</title>
+  </head>
+  <body>
+    <h1>Custom filter</h1>
+    <div ng-controller='MsgController'>
+      {{name}} has a message for you: <br>
+      Original: {{sayMessage()}}<br>
+      Positive: {{sayPositive()}}<br>
+      Truth: {{sayPositive()|truth: "meaningful":"Suffering"}}<br>
+      BIG TRUTH: {{sayPositive()|truth: "meaningful":"Suffering"|uppercase}}
+    </div>
+  </body>
+</html>
